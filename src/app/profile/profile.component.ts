@@ -7,5 +7,14 @@ import { Component } from "@angular/core";
 })
 
 export class ProfileCompoent{
+bgColor='green'
+ fontSize='80px'
+ headingSizeBing='60px'
+ headingSizeSmall='30px'
 
+ zoom=true
+
+ updeateHeadingSize(){
+  this.zoom=!this.zoom
+ }
 }
