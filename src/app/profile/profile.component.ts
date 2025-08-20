@@ -11,7 +11,6 @@ import { NgFor } from "@angular/common";
    
 export class ProfileCompoent{
  students=["vaibhav","aniket","rahil","vishal","peter"]
-
  studentData=[
   {
     name:'vaibhav',
@@ -39,6 +38,4 @@ export class ProfileCompoent{
     email:'peter@test.com'
   }
  ]
-
- 
 }
