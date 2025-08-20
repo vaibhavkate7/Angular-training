@@ -1,15 +1,13 @@
-<h1>
-  *ngFor Direction in Angular
+<h1 
+  [style.backgroundColor]="bgColor" 
+  [style.fontSize]="fontSize">
+    Dynamic Style
 </h1>
-<ul>:
-  <li *ngFor="let x of students">
-    {{x}}
-  </li>
-</ul>
-<ul>
-  <li *ngFor="let student of studentData">
-    {{student.name}},
-    {{student.age}},
-    {{student.email}}
-  </li>
-</ul>
+<h1 
+  [style.fontSize]="zoom?'90px':'40px'"> 
+    Heading
+</h1>
+<button 
+  (click)="updeateHeadingSize()">
+    Toggle Font
+</button>

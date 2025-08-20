@@ -4,18 +4,18 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileCompoent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { ProjectComponent } from "./project/project.component";
 @Component({
   selector: 'app-root',
-  imports: [LoginComponent,SignupComponent,ProfileCompoent,AppComponent,FormsModule],
+  imports: [
+    LoginComponent, 
+    SignupComponent, 
+    ProfileCompoent, 
+    AppComponent, 
+    FormsModule, 
+    ProjectComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
- tast='';
- taskList:{id:number,task:string}[]=[]
- addTask(){
-  this.taskList.push({id:this.taskList.length+1,task:this.tast})
-  console.log(this.taskList);
-  
- }
-}
+export class AppComponent {}
