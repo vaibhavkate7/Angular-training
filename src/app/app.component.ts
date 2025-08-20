@@ -1,20 +1,22 @@
 import { Component, effect, EnvironmentInjector,signal, WritableSignal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 import { ProfileCompoent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { ProjectComponent } from "./project/project.component";
+import { HeaderComponent } from "./header/header.component";
 @Component({
   selector: 'app-root',
   imports: [
-    LoginComponent, 
-    SignupComponent, 
-    ProfileCompoent, 
-    AppComponent, 
-    FormsModule, 
-    ProjectComponent
-  ],
+    LoginComponent,
+    ProfileCompoent,
+    AppComponent,
+    FormsModule,
+    ProjectComponent,
+    RouterOutlet,
+    HeaderComponent,
+    HeaderComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
