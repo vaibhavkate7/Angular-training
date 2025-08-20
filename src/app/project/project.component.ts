@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { NgForOf, } from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
 import { NgFor, NgIf ,NgSwitch, NgSwitchCase,NgSwitchDefault } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-project',
-  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault],
+  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault,RouterLink,
+],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css'
 })
