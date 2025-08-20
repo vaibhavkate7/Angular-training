@@ -24,3 +24,17 @@
     login
   </a>
 </ng-template>
+<hr>
+<h1>*ngSwitch Directives in Angular</h1>
+<button (click)="changeColor('red')" >Red</button>
+<button (click)="changeColor('green')" >green</button>
+<button (click)="changeColor('yellow')" >yellow</button>
+<button (click)="changeColor('')">No color</button>
+
+<div [ngSwitch]="color">
+  <h2 *ngSwitchCase="'red'" style="background-color: red;">Red Color</h2>
+<h2 *ngSwitchCase="'green'" style="background-color: green;">green Color</h2>
+<h2 *ngSwitchCase="'yellow'" style="background-color: yellow;">yellow Color</h2>
+<h2 *ngSwitchDefault=>No Color Mach</h2>
+</div>
+

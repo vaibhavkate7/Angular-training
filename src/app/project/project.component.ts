@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NgForOf,} from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
-import { NgFor, NgIf  } from '@angular/common';
+import { NgForOf, } from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
+import { NgFor, NgIf ,NgSwitch, NgSwitchCase,NgSwitchDefault } from '@angular/common';
 
 @Component({
   selector: 'app-project',
-  imports: [NgFor,NgIf ],
+  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css'
 })
@@ -32,7 +32,13 @@ studentsData=[
     email:'vikas@test.com'
   }
 ]
-
+//ngIf
   login:boolean=false;
- 
+
+//ngSwitch
+color="yellow";
+
+changeColor(color:string){
+this.color=color
+}
 }
