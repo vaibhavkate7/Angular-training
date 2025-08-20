@@ -11,3 +11,16 @@
     {{student.email}}
   </li>
 </ul>
+
+<hr>
+<h1>ngIf Directives in Angular</h1>
+<div *ngIf="login; else elseBlock">
+  <a href="/">
+    Logout
+  </a>
+</div>
+<ng-template #elseBlock>
+  <a href="/">
+    login
+  </a>
+</ng-template>

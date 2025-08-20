@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { NgForOf } from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
-import { NgFor } from '@angular/common';
+import { NgForOf,} from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
+import { NgFor, NgIf  } from '@angular/common';
 
 @Component({
   selector: 'app-project',
-  imports: [NgFor ],
+  imports: [NgFor,NgIf ],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css'
 })
 export class ProjectComponent {
 student=['vaibhav','aniket','rahil','vishal']
- 
 studentsData=[
   {
     name:'vaibhav',
@@ -34,4 +33,6 @@ studentsData=[
   }
 ]
 
+  login:boolean=false;
+ 
 }
