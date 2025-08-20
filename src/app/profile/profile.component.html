@@ -1,1 +1,13 @@
-<h1>profile heading1</h1>
+<h1 
+  [style.backgroundColor]="bgColor" 
+  [style.fontSize]="fontSize">
+    Dynamic Style
+</h1>
+<h1 
+  [style.fontSize]="zoom?'90px':'40px'"> 
+    Heading
+</h1>
+<button 
+  (click)="updeateHeadingSize()">
+    Toggle Font
+</button>
