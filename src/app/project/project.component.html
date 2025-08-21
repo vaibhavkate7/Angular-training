@@ -65,7 +65,7 @@
 </form>
 
 <hr>
-<h1>Form Grouping in Reactive Forms</h1>
+<!-- <h1>Form Grouping in Reactive Forms</h1>
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
  <input type="text" placeholder="enter name" formControlName="name">
  <br><br>
@@ -79,7 +79,28 @@
 </form>
 <h1>{{this.profileForm.value.name}}</h1>
 <h1>{{this.profileForm.value.password}}</h1>
-<h1>{{this.profileForm.value.email}}</h1>
+<h1>{{this.profileForm.value.email}}</h1> -->
+
+<hr>
+<h1>Reactive form Validation </h1>
+<form [formGroup]="profileForm" (ngSubmit)="SubmitData()">
+ <input type="text" placeholder="enter name" formControlName="name">
+ <span *ngIf="myName?.hasError('required')">Name is required</span>
+ <span class="error" *ngIf="myName?.invalid && (myName?.dirty || myName?.touched)">Provide enter user name </span>
+
+ <br><br>
+  <input type="text" placeholder="enter password" formControlName="password">
+  <span *ngIf="myPassword?.hasError('required')">password is required</span>
+ <span class="error" *ngIf="myPassword?.invalid && (myPassword?.dirty || myPassword?.touched)">Provide enter valid password </span>
+
+ <br><br>
+  <input type="text" placeholder="enter email" formControlName="email">
+  <span *ngIf="myEmail?.hasError('required')">email is required</span>
+ <span class="error" *ngIf="myEmail?.invalid && (myEmail?.dirty || myEmail?.touched)">Provide enter valid email </span>
+
+ <br><br>
+ <button>Submit</button>
 
 
+ 
 
