@@ -10,5 +10,6 @@ export const routes: Routes = [
   {path:'profile',component:ProfileCompoent},
   {path:'project',component:ProjectComponent},
   {path:'',component:HomeComponent},
+  {path:'profile',component:ProfileCompoent},
   {path:'**',component:PageNotFoundComponent}
 ];
