@@ -50,5 +50,19 @@
   </li>
 </ul>
 
+<hr>
+<h1>Basic of Racet Forms</h1>
+<form action="" method="post" >
+  <input type="text" placeholder="enter Name" [formControl]="name">
+  <br>
+  <br>
+  <input type="text" placeholder="enter password" [formControl]="password">
+  <br><br>
+  <button type="button" (click)="displayValue()" >Login</button> 
+  <h3>{{name.value}}</h3> 
+  <h3>{{password.value}}</h3> 
 
- 
+</form>
+
+
+

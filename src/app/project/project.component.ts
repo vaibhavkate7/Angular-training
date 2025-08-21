@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { NgForOf, } from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
 import { NgFor, NgIf ,NgSwitch, NgSwitchCase,NgSwitchDefault } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-project',
-  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault,RouterLink,
+  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault,RouterLink, ReactiveFormsModule
+
 ],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css'
@@ -43,4 +45,14 @@ color="yellow";
 changeColor(color:string){
 this.color=color
 }
+
+name=new FormControl();
+password=new FormControl();
+
+displayValue(){
+  console.log(this.name.value,this.password.value);
+  
+}
+
+
 }
