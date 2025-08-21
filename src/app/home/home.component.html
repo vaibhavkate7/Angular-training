@@ -3,3 +3,11 @@
 <!-- <a [routerLink]="['profile',{name:'vaibhav kate'}]">Go To Profile Page</a> -->
 
 <button (click)="goToProfile()" >Go to profile page</button>
+
+<h1>User List</h1>
+
+<ul>
+  @for(User of users;track User.id){
+<li><a routerLink="user/{{User.id}}/{{User.name}}">{{User.name}}</a> </li>
+}
+</ul>
