@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgForOf, } from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
 import { NgFor, NgIf ,NgSwitch, NgSwitchCase,NgSwitchDefault } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-project',
@@ -53,6 +53,22 @@ displayValue(){
   console.log(this.name.value,this.password.value);
   
 }
+//
+profileForm=new FormGroup({
+  name:new FormControl('vaibhav'),
+  password:new FormControl('1234'),
+  email:new FormControl('vaibhav@test.com'),
 
-
+})
+onSubmit(){
+  console.log(this.profileForm.value);
+  
+}
+setValue(){
+  this.profileForm.setValue({
+    name:'peter',
+    password:"424",
+    email:"peter@test.com"
+  })
+}
 }
