@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { NgForOf } from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
-import { NgFor } from '@angular/common';
+import { NgForOf, } from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
+import { NgFor, NgIf ,NgSwitch, NgSwitchCase,NgSwitchDefault } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-project',
-  imports: [NgFor ],
+  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault,RouterLink,
+],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css'
 })
 export class ProjectComponent {
 student=['vaibhav','aniket','rahil','vishal']
- 
 studentsData=[
   {
     name:'vaibhav',
@@ -33,5 +34,13 @@ studentsData=[
     email:'vikas@test.com'
   }
 ]
+//ngIf
+  login:boolean=false;
 
+//ngSwitch
+color="yellow";
+
+changeColor(color:string){
+this.color=color
+}
 }
