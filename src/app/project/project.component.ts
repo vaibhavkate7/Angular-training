@@ -80,7 +80,7 @@ displayValue(){
   });
 
   SubmitData(): void {
-      console.log(this.profileForm.value);
+    console.log(this.profileForm.value);
   }
 
   get myName() {

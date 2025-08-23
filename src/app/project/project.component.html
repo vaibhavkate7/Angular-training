@@ -52,15 +52,15 @@
 
 <hr>
 <h1>Basic of Racet Forms</h1>
-<form action="" method="post" >
+<form action="" method="post">
   <input type="text" placeholder="enter Name" [formControl]="name">
   <br>
   <br>
   <input type="text" placeholder="enter password" [formControl]="password">
   <br><br>
-  <button type="button" (click)="displayValue()" >Login</button> 
-  <h3>{{name.value}}</h3> 
-  <h3>{{password.value}}</h3> 
+  <button type="button" (click)="displayValue()">Login</button>
+  <h3>{{name.value}}</h3>
+  <h3>{{password.value}}</h3>
 
 </form>
 
@@ -84,22 +84,30 @@
 <hr>
 <h1>Reactive form Validation </h1>
 <form [formGroup]="profileForm" (ngSubmit)="SubmitData()">
- <input type="text" placeholder="enter name" formControlName="name">
- <span *ngIf="myName?.hasError('required')">Name is required</span>
- <span class="error" *ngIf="myName?.invalid && (myName?.dirty || myName?.touched)">Provide enter user name </span>
-
- <br><br>
+  <input type="text" placeholder="enter name" formControlName="name">
+  <span *ngIf="myName?.hasError('required')">Name is required
+  </span>
+  <span class="error" *ngIf="myName?.invalid && (myName?.dirty || myName?.touched)">
+    Provide enter user name
+  </span>
+  <br><br>
   <input type="text" placeholder="enter password" formControlName="password">
-  <span *ngIf="myPassword?.hasError('required')">password is required</span>
- <span class="error" *ngIf="myPassword?.invalid && (myPassword?.dirty || myPassword?.touched)">Provide enter valid password </span>
-
- <br><br>
+  <span *ngIf="myPassword?.hasError('required')">
+    password is required
+  </span>
+  <span class="error" *ngIf="myPassword?.invalid && (myPassword?.dirty || myPassword?.touched)">
+    Provide enter valid password
+  </span>
+  <br><br>
   <input type="text" placeholder="enter email" formControlName="email">
-  <span *ngIf="myEmail?.hasError('required')">email is required</span>
- <span class="error" *ngIf="myEmail?.invalid && (myEmail?.dirty || myEmail?.touched)">Provide enter valid email </span>
-
- <br><br>
- <button>Submit</button>
+  <span *ngIf="myEmail?.hasError('required')">
+    email is required
+  </span>
+  <span class="error" *ngIf="myEmail?.invalid && (myEmail?.dirty || myEmail?.touched)">
+    Provide enter valid email
+  </span>
+  <br><br>
+  <button>Submit</button>
 
 
  
