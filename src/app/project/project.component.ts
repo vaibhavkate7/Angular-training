@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { NgForOf, } from "../../../node_modules/@angular/common/common_module.d-NEF7UaHr";
 import { NgFor, NgIf ,NgSwitch, NgSwitchCase,NgSwitchDefault } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-project',
-  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault,RouterLink, ReactiveFormsModule
+  imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault,RouterLink, ReactiveFormsModule,FormsModule
 
 ],
   templateUrl: './project.component.html',
@@ -94,4 +94,12 @@ displayValue(){
   get myEmail() {
     return this.profileForm.get('email');
   }
+  //
+  userDetails: any;
+
+  addDetails(val: any) {
+    console.log(val);
+    this.userDetails = val;
+  }
 }
+
