@@ -2,7 +2,7 @@ import { Component, effect, EnvironmentInjector,signal, WritableSignal } from '@
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ProfileCompoent } from './profile/profile.component';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from "./project/project.component";
 import { HeaderComponent } from "./header/header.component";
 @Component({
@@ -15,10 +15,12 @@ import { HeaderComponent } from "./header/header.component";
     ProjectComponent,
     RouterOutlet,
     HeaderComponent,
-    HeaderComponent
+    HeaderComponent,
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
 }
+
