@@ -6,7 +6,7 @@ import { ActivatedRoute } from "@angular/router";
 @Component({
   selector:'app-profile',
   templateUrl:'./profile.component.html',
-  imports: [NgFor],
+  imports:[NgFor],
 })
 
 export class ProfileCompoent {
